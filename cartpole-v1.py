@@ -7,7 +7,7 @@ ray.init(address="auto")
 config = (
     PPOConfig()
     .environment(env="CartPole-v1")
-    .env_runners(num_rollout_workers=1)
+    .env_runners(num_env_runners=1)
 )
 
 tuner = tune.Tuner(
